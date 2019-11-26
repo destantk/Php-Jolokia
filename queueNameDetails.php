@@ -21,3 +21,10 @@ foreach ($xml->channel->item as $item) {
     $object = json_decode($item->description);
     var_export($object);
 }
+
+//Remove
+//$url = 'http://...HOSTNAME....:8161/api/jolokia/exec/org.apache.activemq:type=Broker,brokerName=localhost,destinationName=' . $value->message . ',destinationType=Queue/removeMessage(java.lang.String)/' . $value->id;
+//Copy
+//$url = 'http://...HOSTNAME....:8161/api/jolokia/exec/org.apache.activemq:type=Broker,brokerName=localhost,destinationName=' . $value->message . ',destinationType=Queue/moveMessageTo(java.lang.String,java.lang.String)/' . $value->id . '/' . $value->destination . '';
+//Delete
+//$url = 'http://...HOSTNAME....:8161/api/jolokia/exec/org.apache.activemq:type=Broker,brokerName=localhost,destinationName=' . $value->message . ',destinationType=Queue/copyMessageTo(java.lang.String,java.lang.String)/' . $value->id . '/' . $value->destination. '';
